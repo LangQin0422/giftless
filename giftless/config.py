@@ -14,7 +14,7 @@ default_transfer_config = {
     "basic": figcan.Extensible({
         "factory": "giftless.transfer.basic_streaming:factory",
         "options": figcan.Extensible({
-            "storage_class": "giftless.storage.local_storage:LocalStorage",
+            "storage_class": "giftless.storage.amazon_s3:AmazonS3Storage",
             "storage_options": figcan.Extensible({
                 "path": "lfs-storage"
             }),
@@ -28,7 +28,7 @@ default_config = {
     "TESTING": False,
     "DEBUG": False,
     "AUTH_PROVIDERS": [
-        'giftless.auth.allow_anon:read_only'
+        'giftless.auth.allow_anon:read_write'
     ],
     "PRE_AUTHORIZED_ACTION_PROVIDER": {
         'factory': 'giftless.auth.jwt:factory',

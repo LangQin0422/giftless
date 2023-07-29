@@ -3,7 +3,7 @@
 ### --- Build Depdendencies ---
 
 FROM python:3.7 as builder
-MAINTAINER "Shahar Evron <shahar.evron@datopian.com>"
+# MAINTAINER "Shahar Evron <shahar.evron@datopian.com>"
 
 # Build wheels for uWSGI and all requirements
 RUN DEBIAN_FRONTEND=noninteractive apt-get update \
